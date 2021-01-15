@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/pages/Home';
 import Login from './src/pages/Login';
 import Scan from './src/pages/Scan';
+import LiveWith from './src/pages/LiveWith';
+import List from './src/pages/List';
 import Create from './src/pages/Create';
 
 const Stack = createStackNavigator();
@@ -27,6 +29,8 @@ export default function App() {
                     options={{ headerLeft: false }}
                 />
                 <Stack.Screen name="Create" component={Create} />
+                <Stack.Screen name="LiveWith" component={LiveWith} />
+                <Stack.Screen name="List" component={List} />
             </Stack.Navigator>
         </NavigationContainer>
     );
