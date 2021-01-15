@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { View, TextInput, StyleSheet, Button } from 'react-native';
+import { View, TextInput, StyleSheet, Button, Alert } from 'react-native';
 
 export default function LiveWith({ navigation }) {
     const [name, setName] = useState('');
 
     const handleNavigation = (route) => {
-        navigation.navigate(route);
+        if (name.length < 3) {
+            Alert.alert('Alert', 'Please type more then 2 words');
+            return;
+        }
+        navigation.navigate(route, { name: name });
     };
 
     return (

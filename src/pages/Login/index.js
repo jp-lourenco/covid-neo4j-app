@@ -28,11 +28,11 @@ export default function Login({ navigation }) {
             console.log(response.data);
             await AsyncStorage.setItem('ID', response.data.id.toString());
             Alert.alert(`${response.data.name} created!`);
-            navigation.navigate('Scan');
         } catch (err) {
             console.log(err);
             Alert.alert('Something went wrong!');
         }
+        navigation.navigate('Scan');
     };
 
     return (
