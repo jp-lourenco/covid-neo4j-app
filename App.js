@@ -8,6 +8,7 @@ import Scan from './src/pages/Scan';
 import LiveWith from './src/pages/LiveWith';
 import List from './src/pages/List';
 import Create from './src/pages/Create';
+import Contacts from './src/pages/Contacts';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,7 @@ export default function App() {
                 <Stack.Screen name="Create" component={Create} />
                 <Stack.Screen name="LiveWith" component={LiveWith} />
                 <Stack.Screen name="List" component={List} />
+                <Stack.Screen name="Contacts" component={Contacts} />
             </Stack.Navigator>
         </NavigationContainer>
     );
